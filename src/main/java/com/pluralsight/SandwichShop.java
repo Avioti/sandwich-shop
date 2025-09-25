@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class SandwichShop {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("Welcome to the Sandwich Shop!");
         System.out.println("Please select what size loaf you would like");
         double Regular_base_price = 5.45;
@@ -24,14 +25,14 @@ public class SandwichShop {
             int age = scanner.nextInt();
             if (age <= 17){
                 Regular_base_price = Regular_student_discount - Regular_base_price;
-                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price + 1.00));
+                System.out.printf("The price is $%.2f", Math.abs(Regular_base_price + 1.00));
             }
             else if (age >= 65){
                 Regular_base_price = Regular_senior_discount - Regular_base_price;
-                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price+ 1.00));
+                System.out.printf("The price is $%.2f", Math.abs(Regular_base_price+ 1.00));
             }
             else {
-                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price+ 1.00));
+                System.out.printf("The price is $%.2f", Math.abs(Regular_base_price+ 1.00));
             }
 
         }
@@ -45,14 +46,14 @@ public class SandwichShop {
             int age = scanner.nextInt();
             if (age <= 17){
                 Large_base_price = Large_student_discount - Large_base_price;
-                System.out.printf("The price is $ %.2f", Math.abs(Large_base_price));
+                System.out.printf("The price is $%.2f", Math.abs(Large_base_price));
             }
             else if (age >= 65){
                 Large_base_price = Large_senior_discount - Large_base_price;
-                System.out.printf("The price is $ %.2f", Math.abs(Large_base_price));
+                System.out.printf("The price is $%.2f", Math.abs(Large_base_price));
             }
             else {
-                System.out.printf("The price is $ %.2f", Math.abs(Large_base_price));
+                System.out.printf("The price is $%.2f", Math.abs(Large_base_price));
             }
         }
 
