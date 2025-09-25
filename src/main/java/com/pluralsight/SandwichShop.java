@@ -15,22 +15,32 @@ public class SandwichShop {
         double Large_student_discount = Large_base_price * 0.10;
         double Large_senior_discount = Large_base_price * 0.20;
         if (Sandwich_size.equalsIgnoreCase("Regular") ){
+            System.out.println("Would you like a loaded sandwich? (yes/no)");
+            String loaded = scanner.next();
+            if (loaded.equalsIgnoreCase("yes")){
+                Regular_base_price = Regular_base_price + 1.00;
+            }
             System.out.println("How old are you?");
             int age = scanner.nextInt();
             if (age <= 17){
                 Regular_base_price = Regular_student_discount - Regular_base_price;
-                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price));
+                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price + 1.00));
             }
             else if (age >= 65){
                 Regular_base_price = Regular_senior_discount - Regular_base_price;
-                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price));
+                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price+ 1.00));
             }
             else {
-                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price));
+                System.out.printf("The price is $ %.2f", Math.abs(Regular_base_price+ 1.00));
             }
 
         }
         else if (Sandwich_size.equalsIgnoreCase("Large")) {
+            System.out.println("Would you like a loaded sandwich? (yes/no)");
+            String loaded = scanner.next();
+            if (loaded.equalsIgnoreCase("yes")){
+                Large_base_price = Large_base_price + 1.75;
+            }
             System.out.println("How old are you?");
             int age = scanner.nextInt();
             if (age <= 17){
